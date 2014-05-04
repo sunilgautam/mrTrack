@@ -1,0 +1,78 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".NewEntryActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFFFF"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/textViewName"
+            style="@style/Label"
+            android:text="@string/new_entry_name" />
+
+        <EditText
+            android:id="@+id/txtNewEntryName"
+            style="@style/TextInput"
+            android:text="Sunil"
+            android:inputType="textAutoComplete" />
+        
+        <TextView
+            android:id="@+id/textViewMobile"
+            style="@style/Label"
+            android:text="@string/new_entry_mobile" />
+
+        <EditText
+            android:id="@+id/txtNewEntryMobile"
+            style="@style/TextInput"
+            android:text="9800000000"
+            android:inputType="textAutoComplete" />
+        
+        <TextView
+            android:id="@+id/textViewComment"
+            style="@style/Label"
+            android:text="@string/new_entry_comment" />
+        
+        <EditText
+            android:id="@+id/txtNewEntryComment"
+            style="@style/TextInput"
+            android:gravity="top|left"
+            android:inputType="textMultiLine|textAutoComplete"
+            android:lines="4"
+            android:maxLines="20"
+            android:minLines="4"
+            android:scrollbars="vertical"
+            android:text="my comments ..."
+            android:singleLine="false" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnSaveReminder"
+                style="@style/Button"
+                android:layout_width="match_parent"
+                android:layout_weight=".50"
+                android:onClick="btnSaveClick"
+                android:text="@string/save" />
+
+            <Button
+                android:id="@+id/btnCancelReminder"
+                style="@style/Button"
+                android:layout_width="match_parent"
+                android:layout_weight=".50"
+                android:onClick="btnCancelClick"
+                android:text="@string/cancel" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</ScrollView>
